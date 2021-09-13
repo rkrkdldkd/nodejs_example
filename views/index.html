@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <form id="user-form">
+        <fieldset>
+          <legend>사용자 등록</legend>
+          <div><input id="username" type="text" placeholder="이름" /></div>
+          <div><input id="age" type="number" placeholder="나이" /></div>
+          <div>
+            <input id="married" type="checkbox" /><label for="married"
+              >결혼 여부</label
+            >
+          </div>
+          <button type="submit">등록</button>
+        </fieldset>
+      </form>
+    </div>
+    <br />
+    <div>
+      <table id="user-list">
+        <thead>
+          <tr>
+            <th>이름</th>
+            <th>나이</th>
+            <th>결혼여부</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr id="user-info">
+            <td>{{user.name}}</td>
+            <td>{{user.age}}</td>
+            <td>{{user.married}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/action.js"></script>
+  </body>
+</html>
